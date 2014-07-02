@@ -1,0 +1,24 @@
+import sys
+
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+
+class CropWindow(QMainWindow):
+    """This class creates a main window to observe the growth simulation"""
+
+    def __init__(self):
+        super().__init__() # call super class constructor
+        self.setWindowTitle("Crop Simulator") # set window title
+
+def main():
+    crop_simulation = Qapplication(sys.argv)
+    crop_window = CropWindow() # create an instance
+    crop_window.show()
+    crop_window.raise_()
+    crop_simulation.exec_()
+
+if __name__ == "__main__":
+    main()
+
+        
+    
